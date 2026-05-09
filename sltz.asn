@@ -1,0 +1,61 @@
+SingleLetterTimeZone DEFINITIONS ::=
+BEGIN
+
+  -- 01: A(0x41): UTC +1
+  -- 02: B(0x42): UTC +2
+  -- 03: C(0x43): UTC +3
+  -- 04: D(0x44): UTC +4
+  -- 05: E(0x45): UTC +5
+  -- 06: F(0x46): UTC +6
+  -- 07: G(0x47): UTC +7
+  -- 08: H(0x48): UTC +8
+  -- 09: I(0x49): UTC +9
+  -- 10: J(0x4a): (Local)
+  -- 11: K(0x4b): UTC +10
+  -- 12: L(0x4c): UTC +11
+  -- 13: M(0x4d): UTC +12
+  --
+  -- 14: N(0x4e): UTC -1
+  -- 15: O(0x4f): UTC -2
+  -- 16: P(0x50): UTC -3
+  -- 17: Q(0x51): UTC -4
+  -- 18: R(0x52): UTC -5
+  -- 19: S(0x53): UTC -6
+  -- 20: T(0x54): UTC -7
+  -- 21: U(0x55): UTC -8
+  -- 22: V(0x56): UTC -9
+  -- 23: W(0x57): UTC -10
+  -- 24: X(0x58): UTC -11
+  -- 25: Y(0x59): UTC -12
+  -- 26: Z(0x5a): (GMT)
+  TimeZoneInfo ::= CHOICE {
+    unspecified   [0] IMPLICIT NULL,
+    utc1p         [1] IMPLICIT NULL,  -- UTC +1
+    utc2p         [2] IMPLICIT NULL,  -- UTC +2
+    utc3p         [3] IMPLICIT NULL,  -- UTC +3
+    utc4p         [4] IMPLICIT NULL,  -- UTC +4
+    utc5p         [5] IMPLICIT NULL,  -- UTC +5
+    utc6p         [6] IMPLICIT NULL,  -- UTC +6
+    utc7p         [7] IMPLICIT NULL,  -- UTC +7
+    utc8p         [8] IMPLICIT NULL,  -- UTC +8
+    utc9p         [9] IMPLICIT NULL,  -- UTC +9
+    local         [10] IMPLICIT NULL, -- (Local)
+    utc10p        [11] IMPLICIT NULL, -- UTC +10
+    utc11p        [12] IMPLICIT NULL, -- UTC +11
+    utc12p        [13] IMPLICIT NULL, -- UTC +12
+    utc1m         [14] IMPLICIT NULL, -- UTC −1
+    utc2m         [15] IMPLICIT NULL, -- UTC −2
+    utc3m         [16] IMPLICIT NULL, -- UTC −3
+    utc4m         [17] IMPLICIT NULL, -- UTC −4
+    utc5m         [18] IMPLICIT NULL, -- UTC −5
+    utc6m         [19] IMPLICIT NULL, -- UTC −6
+    utc7m         [20] IMPLICIT NULL, -- UTC −7
+    utc8m         [21] IMPLICIT NULL, -- UTC −8
+    utc9m         [22] IMPLICIT NULL, -- UTC −9
+    utc10m        [23] IMPLICIT NULL, -- UTC −10
+    utc11m        [24] IMPLICIT NULL, -- UTC −11
+    utc12m        [25] IMPLICIT NULL, -- UTC −12
+    gmt           [26] IMPLICIT NULL  -- (GMT)
+  }
+
+END
